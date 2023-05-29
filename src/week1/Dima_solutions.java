@@ -15,8 +15,8 @@ public class Dima_solutions {
 
 
     // "Numbers -- odd & even" task solution
-    public static String identify (int n){ // get the number to check as the method parameter and return the result as a String
-        if (n == 0){                       // check the given number, if it's equals zero, return "zero"
+    public static String identify(int n) { // get the number to check as the method parameter and return the result as a String
+        if (n == 0) {                       // check the given number, if it's equals zero, return "zero"
             return "zero";
         } else if (n % 2 == 0) {           // check the given number if it is dividable by 2, means remainder equals zero
             return "Even";                 // return "Even"
@@ -25,15 +25,15 @@ public class Dima_solutions {
     }
 
     // "FINRA" task solution
-    public static String FinOrRa (int n){        // get the number to check as the method parameter and return the result as a String
+    public static String FinOrRa(int n) {        // get the number to check as the method parameter and return the result as a String
         StringBuilder res = new StringBuilder(); // create StringBuilder object to store the resulting string
-        if (n % 3 == 0){                        // check the given number if it is divisible by 3 or not
+        if (n % 3 == 0) {                        // check the given number if it is divisible by 3 or not
             res.append("FIN");                  // if true, append "FIN" to the result
         }
-        if (n % 5 == 0){                        // check the given number if it is divisible by 5 or not
+        if (n % 5 == 0) {                        // check the given number if it is divisible by 5 or not
             res.append("RA");                   // if true, append "FIN" to the result
         }
-        if (res.length() != 0){                 // check if some Strings were appended to the res object at the previous steps
+        if (res.length() != 0) {                 // check if some Strings were appended to the res object at the previous steps
             return res.toString();              // if true convert StringBuilder object to String and return this String
         }
         return "none";                          // in other cases return "none"
@@ -55,17 +55,17 @@ public class Dima_solutions {
         StringBuilder res = new StringBuilder(); // create StringBuilder object to store the resulting string. String is the easiest way to store the result and append new decimals to the end
         String sign = ""; // assign blank by default
 
-        if ((number < 0  && divisor > 0) || (number > 0  && divisor < 0)){
-            sign = "-";                         //
-            if (number < 0){
-                number = Double.parseDouble(("" + number).substring(1));
+        if ((number < 0 && divisor > 0) || (number > 0 && divisor < 0)) {   // additional function to handle the cases of negative solutions
+            sign = "-";                                                     // determine the negative sign to assign it to the solution further
+            if (number < 0) {
+                number = Double.parseDouble(("" + number).substring(1)); // convert the negative number to positive one for further manipulations
             }
-            if (divisor < 0){
-                divisor = Double.parseDouble(("" +divisor).substring(1));
+            if (divisor < 0) {
+                divisor = Double.parseDouble(("" + divisor).substring(1)); // convert the negative divisor to positive one for further manipulations
             }
         }
 
-        return Double.parseDouble(sign + divideWoOperator(number, divisor, numberOfDecimalPlaces, res).toString());
+        return Double.parseDouble(sign + divideWoOperator(number, divisor, numberOfDecimalPlaces, res).toString()); // calling the helper method to gt the solution
 
     }
 
