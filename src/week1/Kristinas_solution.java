@@ -11,7 +11,7 @@ public class Kristinas_solution {
         finra();
     }
 
-        public static void identify(int number)throws RuntimeException{
+        public static void identify(int number){
 
             if(number <= 0) {
                 throw new RuntimeException();
