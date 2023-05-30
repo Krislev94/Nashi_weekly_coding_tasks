@@ -16,9 +16,7 @@ public class Dima_solutions {
 
     // "Numbers -- odd & even" task solution
     public static String identify(int n) { // get the number to check as the method parameter and return the result as a String
-        if (n == 0) {                       // check the given number, if it's equals zero, return "zero"
-            return "zero";
-        } else if (n % 2 == 0) {           // check the given number if it is dividable by 2, means remainder equals zero
+        if (n % 2 == 0) {           // check the given number if it is dividable by 2, means remainder equals zero
             return "Even";                 // return "Even"
         }
         return "Odd";                      // for the last case when the remainder of the given number divided by 2 not equal zero return "Odd"
