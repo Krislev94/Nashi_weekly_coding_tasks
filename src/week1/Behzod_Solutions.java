@@ -13,7 +13,7 @@ public class Behzod_Solutions {
     //Write a method which can identify given number is even or odd
     public static void identify(int number) {
 
-            if (number <= 0) {
+            if (number < 0) {
                 throw new RuntimeException("Number can not be less than or equal to zero!");
             }
             if(number % 2 == 0){
