@@ -5,7 +5,7 @@ public class Kristinas_solution {
     public static void main(    String[] args) {
         identify(5);
         identify(2);
-        identify(9);
+        identify(-9);
         // identify(0);
 
         finra();
@@ -14,12 +14,15 @@ public class Kristinas_solution {
 
         System.out.println("divide(30,10) = " + divide(30, 10));
         System.out.println("divide(50,5) = " + divide(50, 5));
+        System.out.println("divide(-4,-2) = " + divide(-4, -2));
+        System.out.println("divide(-6,3) = " + divide(-6, 3));
+        System.out.println("divide(10,-2) = " + divide(10, -2));
     }
 
     // Identify odd or even number
         public static void identify(int number){
 
-            if(number <= 0) {
+            if(number == 0) {
                 throw new RuntimeException();
             }
 
@@ -35,10 +38,20 @@ public class Kristinas_solution {
 
     public static int divide(int num1, int num2){
 
+
         if (num2 == 0){ // we can't divide on zero
             throw new ArithmeticException();
         } else if (num1 == 0) { // if we divide zero on any number we will get 0
             return 0;
+        }
+
+
+
+        if (num1 < 0){
+            num1 = -num1;
+        }
+        if (num2 < 0){
+            num2 = -num2;
         }
 
         int count = 0;
@@ -48,9 +61,31 @@ public class Kristinas_solution {
             count++;
         }
 
+        if ((num1 < 0 && num2 > 0) || (num1 > 0 && num2 < 0) ){
+            count = -count;
+        }
+
+
+
         return count;
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         // Print FINRA if the number is divisible by 3 and 5
