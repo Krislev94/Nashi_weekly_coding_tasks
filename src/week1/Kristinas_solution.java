@@ -41,7 +41,6 @@ public class Kristinas_solution {
             return 0;
         }
 
-        int result = 0;
         int count = 0;
 
         while (num1 >= num2){
