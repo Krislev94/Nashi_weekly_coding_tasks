@@ -1,4 +1,4 @@
-package week1;
+package week01;
 
 public class Akylais_Solution {
   public static String OddEven(int num){
