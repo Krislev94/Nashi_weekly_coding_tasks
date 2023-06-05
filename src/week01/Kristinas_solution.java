@@ -45,13 +45,18 @@ public class Kristinas_solution {
             return 0;
         }
 
+        boolean negativeNum1 = false;
+        boolean negativeNum2 = false;
+
 
 
         if (num1 < 0){
             num1 = -num1;
+            negativeNum1 = true;
         }
         if (num2 < 0){
             num2 = -num2;
+            negativeNum2 = true;
         }
 
         int count = 0;
@@ -61,7 +66,7 @@ public class Kristinas_solution {
             count++;
         }
 
-        if ((num1 < 0 && num2 > 0) || (num1 > 0 && num2 < 0) ){
+        if ((negativeNum1 && !negativeNum2) || (!negativeNum1 && negativeNum2)){
             count = -count;
         }
 
