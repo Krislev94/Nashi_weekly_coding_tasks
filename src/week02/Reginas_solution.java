@@ -1,6 +1,4 @@
-package Week2;
-
-import java.sql.SQLOutput;
+package week02;
 
 public class Reginas_solution {
 
