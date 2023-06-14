@@ -9,6 +9,7 @@ public class Kristinas_solution {
         swapVariables(23,54);
 
         divisibleBy_15_5_3();
+        codility(24);
     }
 
     public static void swapVariables(int x, int y){
@@ -54,5 +55,33 @@ public class Kristinas_solution {
         System.out.println("Divisible by 15 : " + num15);
         System.out.println("Divisible by 5 : " + num5);
         System.out.println("Divisible by 3 : " + num3);
+    }
+
+    public static void codility(int number){
+
+        for (int i = 1; i <= number ; i++) {
+            // 2 = Codility
+            // 3 = Test
+            // 5 = Coders
+            if (i % 2 == 0 && i % 3 == 0 && i % 5 == 0){
+                System.out.println("CodilityTestCoders");
+            } else if (i % 2 == 0 && i % 3 == 0) {
+                System.out.println("CodilityTest");
+            } else if ( i % 3 == 0 && i % 5 == 0) {
+                System.out.println("TestCoders");
+            } else if (i % 2 == 0 && i % 5 == 0) {
+                System.out.println("CodilityCoders");
+            } else if (i % 2 == 0) {
+                System.out.println("Codility");
+            } else if (i % 3 == 0) {
+                System.out.println("Test");
+            }else if (i % 5 == 0) {
+                System.out.println("Coders");
+            } else{
+                System.out.println(i);
+            }
+
+        }
+
     }
 }
