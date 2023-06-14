@@ -58,7 +58,7 @@ public class Yulias_solution {
             } else if (i % 5 == 0) {
                 System.out.println("RA");
             }else{
-                System.out.println(i + "");
+                System.out.println(i);
             }
         }
     }
