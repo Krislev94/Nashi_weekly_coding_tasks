@@ -1,4 +1,4 @@
-package week02;
+package Week02;
 
 public class Dima_Solutions {
     public static void main(String[] args) {
