@@ -1,7 +1,6 @@
 package week02;
 
 public class Yulias_solution {
-    public class Yulias_solutions {
         public static void main(String[] args) {
 
 
@@ -18,4 +17,4 @@ public class Yulias_solution {
     }
 
 
-}
+
