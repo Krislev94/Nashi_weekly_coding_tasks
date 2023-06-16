@@ -8,6 +8,11 @@ public class Kristinas_Solution {
         System.out.println("isPrimeNumber(7) = " + isPrimeNumber(7));
         // System.out.println("isPrimeNumber(-14) = " + isPrimeNumber(-14));
        // System.out.println("isPrimeNumber(0) = " + isPrimeNumber(0));
+
+        System.out.println("reverseNegativeNumber(-123) = " + reverseNegativeNumber(-123));
+        System.out.println("reverseNegativeNumber(-527) = " + reverseNegativeNumber(-527));
+        System.out.println("reverseNegativeNumber(-100) = " + reverseNegativeNumber(-100));
+
     }
 
     public static boolean isPrimeNumber(int number){
@@ -34,6 +39,29 @@ public class Kristinas_Solution {
         }
 
         return true;
+
+    }
+
+    public static int reverseNegativeNumber(int negativeNumber){
+
+        // Converting our given integer number into the String
+        String number = String.valueOf(negativeNumber);
+
+        // Creating an empty String to store our reversed number in
+        String reversedNumber = "";
+
+        // Reversing the string
+        for(int i = number.length()-1; i >=0; i--){
+            reversedNumber += number.charAt(i);
+        }
+
+        // Converting our String back to int and deleting that last negative sign at the end
+
+        int result = Integer.parseInt(reversedNumber.substring(0,reversedNumber.length()-1));
+
+        // Putting negative sign first
+        return  -result;
+
 
     }
 
