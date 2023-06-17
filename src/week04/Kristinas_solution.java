@@ -12,14 +12,9 @@ public class Kristinas_solution {
         String result = "";
 
         for (int i = 0; i < string.length(); i++) {
-
-            for (int j = string.length()-1; j >= 0 ; j--) {
-
                 if (!result.contains(""+string.charAt(i))){
                     result += string.charAt(i);
                 }
-            }
-
         }
         System.out.println(result);
 
