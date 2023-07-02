@@ -7,6 +7,12 @@ public class Kristinas_Solutions {
         System.out.println("isValidPassword(\"frog123\") = " + isValidPassword("frog123"));
         System.out.println("isValidPassword(\"Password#1\") = " + isValidPassword("Password#1"));
         System.out.println("isValidPassword(\"pas7sword*\") = " + isValidPassword("pas7sword*"));
+
+        int[] test = {12, 43, 6, 432, 35,-3245};
+        System.out.println("findMax(test) = " + findMax(test));
+
+        System.out.println("sumOfDigitsInString(\"2A1\") = " + sumOfDigitsInString("2A1"));
+        System.out.println("sumOfDigitsInString(\"bHd32Hh902\") = " + sumOfDigitsInString("bHd32Hh902"));
     }
 
     // String -- Password Validation Task
@@ -49,9 +55,39 @@ public class Kristinas_Solutions {
 
     //Array -- Find Maximum
     //Write a method that can find the maximum number from an int Array
+    public static int findMax(int[] intArray){
+        int max = intArray[0];
+
+        for (int each : intArray) {
+            if (each > max){
+                max = each;
+            }
+        }
+        return max;
+    }
 
 
 //    String -- sum of digits in a string
 //    Write a method that can return the sum of the digits in a string
+    public static int sumOfDigitsInString(String string){
+
+        int result = 0;
+        String digits ="";
+
+        char [] stringToChar = string.toCharArray();
+
+        for (char each : stringToChar) {
+            if (Character.isDigit(each)){
+                digits += each;
+            }
+        }
+
+
+        for(String each : digits.split("")){
+            result += Double.parseDouble(each);
+        }
+
+        return result;
+    }
 
 }
