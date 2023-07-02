@@ -72,19 +72,13 @@ public class Kristinas_Solutions {
     public static int sumOfDigitsInString(String string){
 
         int result = 0;
-        String digits ="";
 
         char [] stringToChar = string.toCharArray();
 
         for (char each : stringToChar) {
             if (Character.isDigit(each)){
-                digits += each;
+                result += Integer.parseInt(""+each);
             }
-        }
-
-
-        for(String each : digits.split("")){
-            result += Double.parseDouble(each);
         }
 
         return result;
