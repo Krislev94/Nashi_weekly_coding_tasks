@@ -21,6 +21,11 @@ public class Dima_Solutions {
     public static long sumOfDigitsInString(String input) {
         // String -- sum of digits in a string
         //  Write a method that can return the sum of the digits in a string
+
+        if (input == null || input.length() == 0){
+            return -1;
+        }
+
         char[] symbols = input.toCharArray();
         boolean hasDigit = false;
         int result = 0;
