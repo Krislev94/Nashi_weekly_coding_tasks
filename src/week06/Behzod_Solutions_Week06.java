@@ -1,6 +1,8 @@
 package week06;
 
 
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Behzod_Solutions_Week06 {
 
@@ -18,7 +20,15 @@ public class Behzod_Solutions_Week06 {
         System.out.println("isPasswordValid(\"sfgE%v\") = " + isPasswordValid("sfgE%v"));
         System.out.println("isPasswordValid(\"aFs#4\") = " + isPasswordValid("aFs#4"));
 
+        //TASK 2
+        System.out.println("--------------------------------------------------");
+        int[] numbers = {5,6,3,22,1};
+        System.out.println("findMax(numbers) = " + findMax(numbers));
 
+        //TASK 3
+        System.out.println("------------------------------------------------------");
+        System.out.println("findSum(\"fgu5j7\") = " + findSum("fgu5j7"));
+        System.out.println("findSum(\"find5sum9\") = " + findSum("find5sum9"));
     }
 
     /*
@@ -53,4 +63,33 @@ public class Behzod_Solutions_Week06 {
 
         return uppercase && lowercase && specialChar && digit;
     }
+
+    /*
+    Array -- Find Maximum Write a method that can find the maximum number from an int Array
+     */
+    public static int findMax(int[] array){
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if(array[i] > max){
+                max = array[i];
+            }
+        }
+        return max;
+    }
+
+    /*
+    String -- sum of digits in a string
+    Write a method that can return the sum of the digits in a string
+     */
+    public static int findSum(String str){
+        int sum = 0;
+
+        for(char c:str.toCharArray()){
+            if(Character.isDigit(c)){
+                sum+= Integer.parseInt(""+c);
+            }
+        }
+        return sum;
+    }
+
 }
