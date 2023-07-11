@@ -3,6 +3,8 @@ package week06;
 public class Akylais_Solution {
     public static void main(String[] args) {
         System.out.println("validatePassword(\"Abcd123&\") = " + validatePassword("Abcd123&"));
+
+        System.out.println(MinNum(new int[]{100, 5, 10, 2}));
     }
 
     public static boolean validatePassword(String password){
@@ -25,9 +27,10 @@ public class Akylais_Solution {
     }
 
     public static int findMax(int[] array){
-        int max=Integer.MAX_VALUE;
+        int max=array[0];
         for (int i = 0; i <array.length ; i++) {
-            if(array[i]>max){;
+            if(array[i]>max){
+                max=array[i];
             }
         }
         return max;
@@ -45,5 +48,14 @@ public class Akylais_Solution {
         return sum;
     }
 
+public static int MinNum(int[] array){
 
+        int min=array[0];
+    for (int i = 0; i < array.length; i++) {
+        if(array[i]<min){
+            min=array[i];
+        }
+    }
+    return min;
+}
 }
