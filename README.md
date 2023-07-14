@@ -15,6 +15,7 @@ This is a group project for weekly `Java` coding tasks
 * Marko
 * Ibragim
 * Tim
+* Marwan
 * `Nazim`
 
 https://www.cydeo.com
